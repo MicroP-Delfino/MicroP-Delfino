@@ -1,0 +1,21 @@
+Use this file as a running "reservation" of header pins. 
+If you know a module will be using a specific interface,
+(probably the ones we went over already), list the pins being used under that device.
+
+example:
+***************
+  LCD (GPIO):
+    Pin 1 -> uP pin 3
+    Pin 2 -> uP pin 15
+    Pin 3 -> uP pin 12
+    Pin 4 -> uP pin 2
+    Pin 5 -> uP pin 1
+    Pin 6 -> uP pin 18
+    Pin 7 -> uP pin 7
+    Pin 8 -> uP pin 67
+***************
+
+Mapped Pins:
+
+
+  
