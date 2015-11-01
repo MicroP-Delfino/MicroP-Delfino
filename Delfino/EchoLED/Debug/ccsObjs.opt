@@ -1,0 +1,1 @@
+"./F2837xS_GlobalVariableDefs.obj" "./F2837xS_Gpio.obj" "./F2837xS_SysCtrl.obj" "./F2837xS_usDelay.obj" "./main.obj" "../28377S_FLASH_lnk.cmd" -l"libc.a" -l"C:\ti\controlSUITE\device_support\F2837xS\v170\F2837xS_headers\cmd\F2837xS_Headers_nonBIOS.cmd" 
