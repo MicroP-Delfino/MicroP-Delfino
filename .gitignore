@@ -1,0 +1,8 @@
+.metadata/
+RemoteSystemsTempFiles/
+dvt/
+.obj
+.pp
+.out
+.launches/
+Debug/
