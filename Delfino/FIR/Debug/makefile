@@ -10,9 +10,17 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
+"./F28377S_LaunchPad.obj" \
+"./F2837xS_CpuTimers.obj" \
+"./F2837xS_DefaultISR.obj" \
 "./F2837xS_GlobalVariableDefs.obj" \
+"./F2837xS_Gpio.obj" \
+"./F2837xS_PieVect.obj" \
+"./F2837xS_SysCtrl.obj" \
+"./F2837xS_usDelay.obj" \
+"./FIRTest.obj" \
+"./TestSignal.obj" \
 "./fir16.obj" \
-"./main.obj" \
 "../28377S_RAM_lnk.cmd" \
 $(GEN_CMDS__FLAG) \
 -l"rts2800_fpu32.lib" \
@@ -139,7 +147,7 @@ all: FIR.out
 FIR.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ccsv6/tools/compiler/ti-cgt-c2000_6.4.6/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --tmu_support=tmu0 --cla_support=cla1 --vcu_support=vcu2 -O4 --opt_for_speed=5 --advice:performance=all -g --c99 --diag_warning=225 --display_error_number --diag_wrap=off -z -m"FIR.map" --stack_size=0x200 --warn_sections -i"C:/ti/ccsv6/tools/compiler/ti-cgt-c2000_6.4.6/lib" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-c2000_6.4.6/include" --reread_libs --display_error_number --diag_wrap=off --xml_link_info="FIR_linkInfo.xml" --rom_model -o "FIR.out" $(ORDERED_OBJS)
+	"C:/ti/ccsv6/tools/compiler/ti-cgt-c2000_6.4.6/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --tmu_support=tmu0 --cla_support=cla1 --vcu_support=vcu2 -Ooff --fp_mode=relaxed --advice:performance=all -g --c99 --diag_warning=225 --display_error_number --diag_wrap=off -z -m"FIR.map" --stack_size=0x200 --warn_sections -i"C:/ti/ccsv6/tools/compiler/ti-cgt-c2000_6.4.6/lib" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-c2000_6.4.6/include" --reread_libs --display_error_number --diag_wrap=off --xml_link_info="FIR_linkInfo.xml" --rom_model -o "FIR.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -152,9 +160,9 @@ FIR.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)$(BIN_OUTPUTS__QUOTED)
-	-$(RM) "F2837xS_GlobalVariableDefs.pp" "main.pp" 
-	-$(RM) "F2837xS_GlobalVariableDefs.obj" "fir16.obj" "main.obj" 
-	-$(RM) "fir16.pp" 
+	-$(RM) "F28377S_LaunchPad.pp" "F2837xS_CpuTimers.pp" "F2837xS_DefaultISR.pp" "F2837xS_GlobalVariableDefs.pp" "F2837xS_Gpio.pp" "F2837xS_PieVect.pp" "F2837xS_SysCtrl.pp" "FIRTest.pp" "TestSignal.pp" 
+	-$(RM) "F28377S_LaunchPad.obj" "F2837xS_CpuTimers.obj" "F2837xS_DefaultISR.obj" "F2837xS_GlobalVariableDefs.obj" "F2837xS_Gpio.obj" "F2837xS_PieVect.obj" "F2837xS_SysCtrl.obj" "F2837xS_usDelay.obj" "FIRTest.obj" "TestSignal.obj" "fir16.obj" 
+	-$(RM) "F2837xS_usDelay.pp" "fir16.pp" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

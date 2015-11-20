@@ -1,0 +1,20 @@
+Fixed Point FIR Filter Results:
+	Environment:	TI TMS320F28377S RealTime MicroController
+					SysClk Frequency = 200 MHz
+					ControlSUITE Fixed-Point FIR Libraries
+					
+	Test 1: 
+	25 Tap BPF 
+		| Sample Rate = 8000 Hz
+		| StopBand = 0 Hz - 800 Hz, Attenuation = -40 dB 
+		| PassBand = 1500 Hz - 2500 Hz, Ripple = 5 dB 
+		| StopBand = 3200 Hz - 4000 Hz, Attenuation = -40 dB 
+	Average Execution time (Generate 1 output) = 500 ns
+	
+	Test 2: 
+	341 Tap BPF 
+		| Sample Rate = 48000 Hz
+		| StopBand = 0 Hz - 1000 Hz, Attenuation = -40 dB 
+		| PassBand = 1250 Hz - 1500 Hz, Ripple = 1 dB 
+		| StopBand = 1750 Hz - 24000 Hz, Attenuation = -40 dB 
+	Average Execution time (Generate 1 output) = 1260 ns

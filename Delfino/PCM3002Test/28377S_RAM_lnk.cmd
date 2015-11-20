@@ -60,7 +60,6 @@ SECTIONS
 
    ramgs0           : > RAMGS0,    PAGE = 1
    ramgs1           : > RAMGS1,    PAGE = 1
-   delayBuffer		: > RAMGS2,	   PAGE = 1, ALIGN(256)
 }
 
 /*

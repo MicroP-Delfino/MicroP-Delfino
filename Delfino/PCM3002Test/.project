@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>FIR</name>
+	<name>PCM3002Test</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -26,19 +26,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>F2837xS_CpuTimers.c</name>
+			<name>F2837xS_GlobalVariableDefs.c</name>
 			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/ti/controlSUITE/device_support/F2837xS/v170/F2837xS_common/source/F2837xS_CpuTimers.c</locationURI>
-		</link>
-		<link>
-			<name>F2837xS_DefaultISR.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/ti/controlSUITE/device_support/F2837xS/v170/F2837xS_common/source/F2837xS_DefaultISR.c</locationURI>
-		</link>
-		<link>
-			<name>F2837xS_PieVect.c</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/ti/controlSUITE/device_support/F2837xS/v170/F2837xS_common/source/F2837xS_PieVect.c</locationURI>
+			<locationURI>TI_PRODUCTS_DIR/controlSUITE/device_support/F2837xS/v170/F2837xS_headers/source/F2837xS_GlobalVariableDefs.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
